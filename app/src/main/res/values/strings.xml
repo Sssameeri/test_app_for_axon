@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Persons</string>
+    <string name="cell_phone">Cell phone:</string>
+    <string name="date_of_birth">Date of birth:</string>
+    <string name="phone">Phone:</string>
+    <string name="email">Email:</string>
+</resources>

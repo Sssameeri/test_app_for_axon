@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.DetailsFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imPersonPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="128dp"
+            tools:layout_width="128dp"
+            tools:src='@drawable/ic_android_black_24dp' />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvPersonDateOBirth"
+            app:layout_constraintEnd_toEndOf="@+id/imPersonPhoto"
+            app:layout_constraintStart_toStartOf="@+id/imPersonPhoto"
+            app:layout_constraintTop_toBottomOf="@+id/imPersonPhoto"
+            tools:text="Drew Sssameeri" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvPersonDateOBirth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPersonCellPhone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_of_birth"
+                tools:text="1999-12-13" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvPersonCellPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPersonPhone"
+            app:layout_constraintEnd_toEndOf="@+id/tvPersonDateOBirth"
+            app:layout_constraintStart_toStartOf="@+id/tvPersonDateOBirth"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonDateOBirth">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/cell_phone"
+                tools:text="0174-0705423" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvPersonPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPersonEmail"
+            app:layout_constraintEnd_toEndOf="@+id/tvPersonCellPhone"
+            app:layout_constraintStart_toStartOf="@+id/tvPersonCellPhone"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonCellPhone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                tools:text="0106-4159880" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvPersonEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvPersonPhone"
+            app:layout_constraintStart_toStartOf="@+id/tvPersonPhone"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonPhone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                tools:text="sssameeri.std@gmail.com" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

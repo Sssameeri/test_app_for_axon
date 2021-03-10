@@ -8,6 +8,7 @@ import retrofit2.http.Query
 interface NetworkAPI {
     @GET("api/")
     fun getData(
+        @Query("page") page: Int,
         @Query("key") apiKey: String,
         @Query("results") resultNum: Int
     ): Single<Response>

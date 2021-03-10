@@ -4,4 +4,6 @@
     <string name="date_of_birth">Date of birth:</string>
     <string name="phone">Phone:</string>
     <string name="email">Email:</string>
+    <string name="change_list_view">Change list view</string>
+    <string name="person_first_last_name">%s %s</string>
 </resources>

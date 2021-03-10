@@ -5,12 +5,20 @@
 
     <data>
 
+        <variable
+            name="person"
+            type="com.drewrick.testappforaxon.model.models.Person" />
+
+        <variable
+            name="callback"
+            type="com.drewrick.testappforaxon.view.adapter.PersonAdapter.OnItemClickListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:onClick="@{() -> callback.onClick(person)}"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp">
 
@@ -24,38 +32,30 @@
                 android:layout_height="56dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:setProfilePhoto="@{person.picture.medium}"
                 tools:src="@drawable/ic_android_black_24dp" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvPersonFirstName"
-                android:layout_width="wrap_content"
+                android:id="@+id/text_view_person_name"
+                android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="8dp"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/ivPersonPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivPersonPhoto"
                 app:layout_constraintTop_toTopOf="@+id/ivPersonPhoto"
                 app:layout_constraintVertical_bias="1.0"
+                app:setPersonFirstName="@{person.name.first}"
+                app:setPersonLastName="@{person.name.last}"
                 tools:text="Drew" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvPersonLastName"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tvPersonFirstName"
-                app:layout_constraintStart_toEndOf="@+id/tvPersonFirstName"
-                app:layout_constraintTop_toTopOf="@+id/tvPersonFirstName"
-                tools:text="Sssameeri" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
